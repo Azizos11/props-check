@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Child from "./Profile/Child";
 
 function App() {
+  const getName = (name) => alert(name);
+  const callbackFn = (a) => alert(a);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Child
+        name="Azizos"
+        age={21}
+        isStudent={true}
+        skills="html, css, js"
+        lang={{ english: "excelent", french: "good", german: "excelent" }}
+        getName={getName}
+        callbackFn={callbackFn}
+        selfie="https://i.imgur.com/pbgWEF6.jpeg"
+      />
     </div>
   );
 }
